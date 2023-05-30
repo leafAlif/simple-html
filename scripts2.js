@@ -13,9 +13,15 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 function renderData(inputNama,inputUmur){
-  const outputNama = document.getElementById("output_nama");
-  const outputUmur = document.getElementById("output_umur");
+  const outputElement = document.getElementById("output");
 
-  outputNama.innerText = inputNama;
-  outputUmur.innerText = inputUmur;
+  const nameElement = document.createElement("p");
+  const umurElement = document.createElement("p");
+  nameElement.innerText = inputNama;
+  umurElement.innerText = inputUmur;
+
+  const userElement = document.createElement("div");
+  userElement.append(nameElement,umurElement);
+  
+  outputElement.append(userElement);
 }
