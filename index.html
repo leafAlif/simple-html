@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Simple HTML</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="scripts.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <h1>Form Saja</h1>
+    <section>
+      <h2>Input Data</h2>
+      <form id="form" class="form-base">
+        <div class="form-input">
+          <label for="nama">Nama: </label>
+          <input id="name" name="nama" type="text">
+        </div>
+        <div class="form-input">
+          <label for="Umur">Umur: </label>
+          <input id="umur" name="Umur" type="number">
+        </div>
+        <div class="form-input row">
+          <label for="Makan">Sudah Makan </label>
+          <input id="statusMakan" name="Makan" type="checkbox">
+        </div>
+        <input class="btn-input" type="submit" value="Submit">
+      </form>
+    </section>
+
+    <section>
+      <h2>User Data</h2>
+      <ul id="user_list" class="user-list">
+
+      </ul>
+    </section>
+  </main>
+</body>
+
+</html>
