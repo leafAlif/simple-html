@@ -77,3 +77,11 @@ ul li {
 .row {
   flex-direction: row;
 }
+
+/* index2 */
+.form-style {
+	display: flex;
+	flex-direction: column;
+	max-width: 200px;
+	gap: 4px;
+}
