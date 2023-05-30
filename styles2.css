@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 5px;
+}
+
+.form-style {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  gap: 4px;
+}
+
+/* Output */
+.output {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 200px;
+}
+
+.user-data {
+  border: 1px solid black;
+}

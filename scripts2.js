@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Mengambil value dari id elemen <input>
     const inputNama = document.getElementById("name").value;
     const inputUmur = document.getElementById("umur").value;
-    const output = "User dengan nama " + inputNama + " berumur " + inputUmur + " Telah di-input!";
+
     renderData(inputNama,inputUmur)
     event.preventDefault();
   });
@@ -15,13 +15,14 @@ document.addEventListener("DOMContentLoaded", function () {
 function renderData(inputNama,inputUmur){
   const outputElement = document.getElementById("output");
 
-  const nameElement = document.createElement("p");
+  const nameElement = document.createElement("h4");
   const umurElement = document.createElement("p");
   nameElement.innerText = inputNama;
-  umurElement.innerText = inputUmur;
+  umurElement.innerText = inputUmur + " Tahun";
 
-  const userElement = document.createElement("div");
+  const userElement = document.createElement("li");
+  userElement.classList.add("user-data");
   userElement.append(nameElement,umurElement);
-  
+
   outputElement.append(userElement);
 }
