@@ -21,6 +21,7 @@ function renderData(inputNama,inputUmur){
   umurElement.innerText = inputUmur + " Tahun";
 
   const userElement = document.createElement("li");
+  userElement.setAttribute("id", +new Date())
   userElement.classList.add("user-data");
   userElement.append(nameElement,umurElement);
 
