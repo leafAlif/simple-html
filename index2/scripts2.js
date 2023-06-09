@@ -7,12 +7,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const inputNama = document.getElementById("name").value;
     const inputUmur = document.getElementById("umur").value;
 
-    renderData(inputNama,inputUmur)
+    const output = "User dengan nama " + inputNama + " berumur " + inputUmur + " Telah di-input!";
+    console.log(output);
+    renderData(inputNama, inputUmur);
     event.preventDefault();
   });
 })
 
-function renderData(inputNama,inputUmur){
+function renderData(inputNama, inputUmur) {
   const outputElement = document.getElementById("output");
 
   const nameElement = document.createElement("h4");
@@ -23,7 +25,17 @@ function renderData(inputNama,inputUmur){
   const userElement = document.createElement("li");
   userElement.setAttribute("id", +new Date())
   userElement.classList.add("user-data");
-  userElement.append(nameElement,umurElement);
 
+  const deletebtnElement = document.createElement("button");
+  deletebtnElement.innerText = "Delete";
+  deletebtnElement.addEventListener('click', function () {
+    deleteData(userElement.getAttribute('id'));
+  });
+
+  userElement.append(nameElement, umurElement, deletebtnElement);
   outputElement.append(userElement);
+}
+
+function deleteData(id) {
+  document.getElementById(id).remove();
 }
